@@ -7,8 +7,17 @@ import Layout from '@/layout/index.vue'
     meta: {
       title: 'yuanlin'
     },
+    redirect:"index",
     component: Layout,
     children: [
+      {
+        path: '/index',
+        name: 'index',
+        meta: {
+          title: 'fators'
+        },
+        component: () => import('@/views/index/index.vue')
+      },
       {
         path: '/fators',
         name: 'fators',

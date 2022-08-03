@@ -10,5 +10,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     }
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: '@import "./src/assets/styles/parameter.less";'
+      }
+    }
+  },
   base: './', // 
 })
