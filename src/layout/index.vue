@@ -324,10 +324,12 @@ function gotoPageTab(url: string, e: number) {
     background-color: #fff;
     border-radius: 30px;
     z-index: 100;
+    
     .xx {
       position: absolute;
       top: 10px;
       right: 20px;
+        cursor: pointer;
     }
     .login-name {
       display: flex;
