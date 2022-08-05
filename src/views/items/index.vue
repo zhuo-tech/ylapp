@@ -10,8 +10,8 @@
       </div>
 
       <div class="center">
-        <div class="layout">
-          <div class="img">
+        <div  @click="gotoTarget('/target')"  class="layout">
+          <div  class="img">
             <img class="img" src="../../static/img/2.png" alt="" />
           </div>
           <div class="shade">
@@ -23,7 +23,7 @@
           </div>
         </div>
 
-        <div class="layout">
+        <div @click="gotoTarget('/target')" class="layout">
           <div class="img">
             <img class="img" src="../../static/img/2.png" alt="" />
           </div>
@@ -43,6 +43,12 @@
 <script setup lang="ts">
 import { reactive, toRefs, ref } from "vue";
 import Router from "@/router/index";
+
+
+function gotoTarget(url: string) {
+  Router.replace(url);
+}
+
 </script>
 
 <style lang="less">
@@ -80,6 +86,7 @@ import Router from "@/router/index";
     .layout {
       width: 800px;
       height: 503px;
+      cursor: pointer;
       .img {
         width: 800px;
         height: 503px;

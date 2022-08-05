@@ -287,6 +287,7 @@ function gotoPageTab(url: string, e: number) {
       margin-right: 15px;
     }
     .login-left {
+      border-radius: 5px;
       margin-right: 20px;
       width: 52px;
       height: 32px;
@@ -297,6 +298,8 @@ function gotoPageTab(url: string, e: number) {
       cursor: pointer;
     }
     .login-right {
+      border-radius: 5px;
+
       background-color: #facc00;
       width: 52px;
       height: 32px;

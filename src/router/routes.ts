@@ -61,6 +61,15 @@ import Layout from '@/layout/index.vue'
         },
         component: () => import('@/views/help/index.vue')
       },
+
+      {
+        path: '/target',
+        name: 'target',
+        meta: {
+          title: 'target'
+        },
+        component: () => import('@/views/target/index.vue')
+      },
     ]
   }
 ]
