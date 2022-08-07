@@ -22,6 +22,6 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 const options:any = ref([])来接受 后端传来的值 
 
-for  展示
+for  展示   name  var tip  value 绑定用户输入
 
 绑定 
