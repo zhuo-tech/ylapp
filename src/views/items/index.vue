@@ -1,59 +1,53 @@
 <template>
-  <el-row class="box">
-    <el-col :span="24">
-      <div class="title">
-        <div class="new">新建项目</div>
-        <div class="owner">查看已有项目</div>
-      </div>
-      <div class="hint">
-        选择需要新建的景观绩效评价项目类型，进行后续的指标选择及计算。
-      </div>
+  <div class="box">
+    <div class="title">
+      <div class="new">新建项目</div>
+      <div class="owner">查看已有项目</div>
+    </div>
+    <div class="hint">选择需要新建的景观绩效评价项目类型，进行后续的指标选择及计算。</div>
 
-      <div class="center">
-        <div  @click="gotoTarget('/target')"  class="layout">
-          <div  class="img">
-            <img class="img" src="../../static/img/2.png" alt="" />
-          </div>
-          <div class="shade">
-            <div class="shade-title">新建乡村生态 景观绩效评价项目</div>
-           <div style="display: flex;">
+    <div class="center">
+      <div @click="gotoTarget" class="layout">
+        <img class="img" src="../../static/img/2.png" alt="" />
+        <div class="shade">
+          <div class="shade-title"><span>新建乡村生态 景观绩效评价项目</span></div>
+          <div style="display: flex">
             <div class="placeholder"></div>
-            <div class="shade-text">城市公园绿地包括……先打一堆话来看看排版，之后再替换吧先打一堆话来看看排版之后再替换吧先打一堆话来看看排版，之后再替换吧</div>
-           </div>
-          </div>
-        </div>
-
-        <div @click="gotoTarget('/target')" class="layout">
-          <div class="img">
-            <img class="img" src="../../static/img/2.png" alt="" />
-          </div>
-          <div class="shade">
-            <div class="shade-title">新建乡村生态 景观绩效评价项目</div>
-           <div style="display: flex;">
-            <div class="placeholder"></div>
-            <div class="shade-text">城市公园绿地包括……先打一堆话来看看排版，之后再替换吧先打一堆话来看看排版之后再替换吧先打一堆话来看看排版，之后再替换吧</div>
-           </div>
+            <div class="shade-text">
+              城市公园绿地包括……先打一堆话来看看排版，之后再替换吧先打一堆话来看看排版之后再替换吧先打一堆话来看看排版，之后再替换吧
+            </div>
           </div>
         </div>
       </div>
-    </el-col>
-  </el-row>
+
+      <div @click="gotoTarget" class="layout">
+        <img class="img" src="../../static/img/2.png" alt="" />
+        <div class="shade">
+          <div class="shade-title"><span>新建乡村生态 景观绩效评价项目</span></div>
+          <div style="display: flex">
+            <div class="placeholder"></div>
+            <div class="shade-text">
+              城市公园绿地包括……先打一堆话来看看排版，之后再替换吧先打一堆话来看看排版之后再替换吧先打一堆话来看看排版，之后再替换吧
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { reactive, toRefs, ref } from "vue";
 import Router from "@/router/index";
 
-
-function gotoTarget(url: string) {
-  Router.replace(url);
+function gotoTarget() {
+  Router.push("/target");
 }
-
 </script>
 
 <style lang="less">
 .box {
-  padding: 28px 100px;
+  padding: 28px 5%;
   .title {
     display: flex;
     justify-content: space-between;
@@ -83,36 +77,43 @@ function gotoTarget(url: string) {
     display: flex;
     justify-content: space-between;
     position: relative;
+    width: 100%;
+
     .layout {
-      width: 800px;
-      height: 503px;
+      width: 48%;
+      height: auto;
       cursor: pointer;
       .img {
-        width: 800px;
-        height: 503px;
+        width: 100%;
+        height: auto;
       }
       .shade {
         position: absolute;
         bottom: 50px;
-        width: 800px;
-        height: 180px;
+        width: 48%;
+        height: 7vw;
         background: rgba(0, 0, 0, 0.44);
-        .shade-title{
-          margin: 0 0 20px 400px;
-          direction: rtl;
-          color: #fff;
-          font-size: 40px;
-          letter-spacing: 3px;
+        .shade-title {
+          margin: 0.5vw 0 1vw 0;
+          display: flex;
+          justify-content: flex-end;
+          span {
+            direction: rtl;
+            color: #fff;
+            font-size: 1.5vw;
+            letter-spacing: 3px;
+          }
         }
-        .placeholder{
+        .placeholder {
           margin: 0px 20px 0 50px;
           width: 5px;
           height: 40px;
           border-radius: 50px;
           background-color: #fff;
         }
-        .shade-text{
+        .shade-text {
           color: #fff;
+          font-size: 0.85vw;
         }
       }
     }
